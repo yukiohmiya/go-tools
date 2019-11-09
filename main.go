@@ -91,7 +91,10 @@ func main() {
 		fmt.Println("Error:", err)
 	}
 	for i := 0; i < len(urlList); i++ {
-		err = writer.Write([]string{strconv.Itoa(i), urlList[i]["title"], urlList[i]["url"], urlList[i]["statusCode"]})
+		err = writer.Write([]string{strconv.Itoa(i),
+			urlList[i]["title"],
+			urlList[i]["url"],
+			urlList[i]["statusCode"]})
 		if err != nil {
 			fmt.Println("Error:", err)
 		}
